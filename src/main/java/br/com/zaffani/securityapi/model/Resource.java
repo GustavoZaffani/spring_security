@@ -2,17 +2,15 @@ package br.com.zaffani.securityapi.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.util.UUID;
 
 @Table(name = "resource")
 @Entity(name = "Resource")
-@Getter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -35,4 +33,8 @@ public class Resource {
     @NotBlank
     @Column(name = "description")
     private String description;
+
+    @NotNull
+    @Column(name = "deleted")
+    private Boolean deleted;
 }
