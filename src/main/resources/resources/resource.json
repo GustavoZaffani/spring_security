@@ -1,0 +1,9 @@
+{
+  "resources": [
+    {
+      "id": "res:users/create",
+      "label": "Criação de usuário",
+      "description": "API responsável pela criação de um novo usuário"
+    }
+  ]
+}
